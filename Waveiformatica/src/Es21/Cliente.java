@@ -4,10 +4,12 @@ public class Cliente {
 	private String nominativo;
 	private String nTelefono;
 	private int n;
-	public Cliente(String nominativo, String nTelefono) {
+	private int id;
+	public Cliente(String nominativo, String nTelefono,int n,int id) {
 		this.nominativo = nominativo;
 		this.nTelefono = nTelefono;
-		this.n = 0;
+		this.n = n;
+		this.id = id;
 	}
 	public String getNominativo() {
 		return nominativo;
@@ -28,10 +30,18 @@ public class Cliente {
 		this.n = n;
 	}
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	@Override
 	public String toString() {
-		return "Cliente [nominativo=" + nominativo + ", nTelefono=" + nTelefono + ", n=" + n + "]";
+		return "Cliente [nominativo=" + nominativo + ", nTelefono=" + nTelefono + ", n=" + n + ", id=" + id + "]";
 	}
+	
 	
 	
 	
